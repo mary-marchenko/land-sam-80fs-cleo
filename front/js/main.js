@@ -65,11 +65,22 @@ document.addEventListener("DOMContentLoaded", function() {
 // for animation
 
 for (let i = 1; i <= 4; i++) {
-    const el = document.querySelector(`.fav-page__decor-gift-${i}`);
+    const el = document.querySelector(`.fav-page__decor-chip-${i}`);
     if (el) {
         el.addEventListener('animationend', e => {
             if (e.animationName === 'fadeIn') {
                 el.classList.add('start-sway');
+            }
+        });
+    }
+}
+
+for (let i = 1; i <= 4; i++) {
+    const el = document.querySelector(`.fav-page__decor-coin-${i}`);
+    if (el) {
+        el.addEventListener('animationend', e => {
+            if (e.animationName === 'fadeIn') {
+                el.classList.add('start-sway2');
             }
         });
     }
